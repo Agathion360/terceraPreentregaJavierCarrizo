@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Color de la parte superior del navegador -->
+    <meta name="theme-color" content="#efd81d">
+    <!-- Color de la parte superior del navegador -->
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Bootstrap -->
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/13b2e34882.js" crossorigin="anonymous"></script>
+    <!-- fontawesome -->
+
+    <!-- style -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- style -->
+
+    <!-- fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;400&family=Quicksand:wght@300;500&family=Roboto&display=swap"
+        rel="stylesheet">
+    <!-- fuentes -->
+
+
+    <!-- js -->
+    <script defer src="./js/select.js"></script>
+    <script src="./js/objetos.js"></script>
+    <!-- js -->
+
+
+
+    <title>Punto de venta | Stock</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="#">Control de Stock</a> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link " aria-current="page" href="#">Home</a>
+              <a class="nav-link" data-bs-target="#agregarCategoria" data-bs-toggle="modal">Categoria</a>
+              <a class="nav-link" data-bs-target="#agregarUbicacion" data-bs-toggle="modal">Deposito</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <header class="text-center">
+        <h1>Adminsitracion de Stock</h1>
+    </header>
+
+    <main>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Ingreso</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <!-- Formulario -->
+                        <form class="form-nuevoProducto">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col ">
+
+
+
+                                        <div class="mb-3">
+                                            <label class="form-label">Nombre:</label>
+                                            <input type="text" class="form-control nombre">
+                                        </div>
+
+
+                                        <div class="mb-3">
+                                            <label class="form-label">Categoria</label>
+                                            <!-- <input type="text" class="form-control categoria"> -->
+                                            <select class="form-select categoria" aria-label="Default select example">
+                                                <option selected disabled class="opcat ">seleccione una categoria
+                                                </option>
+                                            </select>
+
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label">Ubicacion</label>
+                                            <!-- <input type="text" class="form-control ubicacion"> -->
+                                            <select class="form-select ubicacion" aria-label="Default select example">
+                                                <option selected disabled class="opUb">seleccione una ubicacion</option>
+                                            </select>
+                                        </div>
+
+
+
+                                        <div class="row">
+                                            <div class="mb-3 col-xl-4">
+                                                <label class="form-label">Costo</label>
+                                                <input type="text" class="form-control costo">
+                                            </div>
+
+                                            <!-- <div class="mb-3 col-xl-2">
+                                                <label class="form-label">IVA</label>
+                                                <input type="text" class="form-control iva ">
+                                            </div> -->
+
+                                            <div class="mb-3 col-xl-3">
+                                                <label class="form-label">Cantidad</label>
+                                                <input type="text" class="form-control cantidad">
+                                            </div>
+
+                                            <div class="mb-3 col-xl-3">
+                                                <label class="form-label">% Ganancia</label>
+                                                <input type="text" class="form-control ganancia">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+
+
+                                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal"><i
+                                        class="fa-solid fa-xmark"></i> Cerrar</button>
+
+                                <button type="submit" class="btn btn-outline-personal"><i
+                                        class="fa-solid fa-floppy-disk"></i>
+                                    Guardar</button>
+                            </div>
+
+
+
+                        </form>
+                        <!-- Formulario -->
+                        <button class="btn btn-primary nuevaCategoria" data-bs-target="#agregarCategoria" data-bs-toggle="modal">+
+                            categoria</button>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- modal Nueva Categoria -->
+        <div class="modal fade" id="agregarCategoria" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Nueva Categoria</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form >
+                        <div class="mb-3">
+                            <label class="form-label">Nombre de la Categoria:</label>
+                            <input type="text" class="form-control nombreCategoria">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary btncat">Agregar</button>
+                    </div>
+                     </form>
+                </div>
+            </div>
+        </div>
+          <!-- Fin modal Nueva Categoria -->
+      
+          <!-- modal Nueva Ubicacion -->
+        <div class="modal fade" id="agregarUbicacion" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel3">Nueva Ubicacion</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form >
+                        <div class="mb-3">
+                            <label class="form-label">Nombre de la Ubicacion:</label>
+                            <input type="text" class="form-control nombreUbicacion">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary btnubicaion">Agregar</button>
+                    </div>
+                     </form>
+                </div>
+            </div>
+        </div>
+        
+
+        
+
+    </main>
+
+
+    <section>
+        <div class="container-fluid tabla ">
+            <div class="row ">
+                <div class="col col-xl-7">
+
+                    <form action="" method="post">
+
+                        <input type="search" placeholder="    busqueda por nombre" class="buscador">
+
+                        <button class="btn-buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <!-- <input type="submit" value="Buscar" class="btn-buscar"> -->
+
+                        <table class="table table-personal table-striped">
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>Cantidad</th>
+                                    <th>Descripcion</th>
+                                    <th>Costo</th>
+                                    <th>Precio Venta</th>
+                                    <th>Precio Lote</th>
+
+                                </tr>
+                            </thead>
+                              
+                            <tbody class="tablaProductos">
+                               
+                            </tbody>
+                        </table>
+                        <div class="notificacion-tabla text-center">
+                           
+                        </div>
+                        
+                    </div>
+                </form>
+                <div class="col col-xl-4">
+                    <!-- Button trigger modal -->
+                    <div class="card subtotal">
+                        <div class="card-header text-center">
+                            Almacen
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item totalProducto">  </li>
+                            <li class="list-group-item total_container">Valor Almacen  <span class="total_valor"></span> </li>
+                            <li class="list-group-item">
+                                <button type="button" class="btn  nuevoIngreso" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
+                                    <i class="fa-solid fa-upload"></i> Ingreso Mercaderia
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- toast -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <img src="./assets/img/favicon.png" class="rounded me-2">
+                    <strong class="me-auto">Importante!!</strong>
+                    <small>en este instante</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body texto-alerta">
+                </div>
+            </div>
+        </div>
+        <!-- toast -->
+
+    </section>
+
+
+
+
+    <footer>
+        <p>Javier Carrizo <span>Comision:39470</span></p>
+    </footer>
+
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+
+
+   
+</body>
+
+</html>

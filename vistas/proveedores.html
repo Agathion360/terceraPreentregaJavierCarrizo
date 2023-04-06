@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <!-- Color de la parte superior del navegador -->
+    <meta name="theme-color" content="#efd81d">
+    <!-- Color de la parte superior del navegador -->
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Bootstrap -->
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/13b2e34882.js" crossorigin="anonymous"></script>
+    <!-- fontawesome -->
+
+    <!-- style -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- style -->
+
+    <!-- fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;400&family=Quicksand:wght@300;500&family=Roboto&display=swap"
+        rel="stylesheet">
+    <!-- fuentes -->
+
+
+    <title>Proveedores</title>
+</head>
+<body>
+    
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+<!--  IMAGEN LOGO LATERAL
+            <a class="navbar-brand" href="#">
+                <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="JC" width="30" height="24">
+            </a> -->
+
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll justify-content-end" >
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Empresa
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Link</a>
+              </li>
+            </ul>
+            <!-- <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form> -->
+          </div>
+        </div>
+      </nav>
+</header>
+
+
+<main>
+
+     <!-- Button trigger modal -->
+     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Launch static backdrop modal
+    </button>
+
+<div class="container-fluid">
+    <div class="row  cont-Provee">
+     
+            
+            <div class="col col-xl-12" >
+                <table class="table table table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+           
+         </div>
+   
+</div>
+
+
+  <!-- Modal -->
+  <div class="modal fade modal-dialog-scrollable modal-xl" id="staticBackdrop"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+    <div class="modal-dialog" >
+      <div class="modal-content" >
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+            <form class="form-proveedor">
+                <div class="mb-3">
+                    <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="form-floating mb-3 nombreP">
+                                <input type="text" class="form-control" id="floatingInputname" placeholder="Nombre" >
+                                <label for="floatingInput">Nombre</label>
+                            </div>
+                          </div>
+                    
+                   
+                          <div class="col-md-4">
+                            <a href="" class="btn btn-warning"> persona</a>
+                            <a href="" class="btn btn-info"> empresa</a>
+                          </div> 
+
+                            
+
+                        </div> <!--fin row -->
+
+                        <div class="row">
+                            <div class="col">
+                                    <ul class="nav nav-tabs" ><!--tabs -->
+                                      <li class="nav-item" >
+                                        <a class="nav-link active text-center vuelo" data-bs-toggle="tab" href="#vuelos"> Basico</a>
+                                      </li>
+                                
+                                      <li class="nav-item" >
+                                        <a class="nav-link text-center reserva" data-bs-toggle="tab" href="#reserva"> Datos Bancarios</a>
+                                      </li>
+                                    </ul><!--fin tabs -->
+
+
+                                    <div class="tab-content">
+                                      <div class="tab-pane fade show active" id="vuelos" >
+                                        <div class="row">
+                                          
+                                            <div class="col-6">
+                                                <div class="form-floating mb-3 direccionP">
+                                                    <input type="text" class="form-control"  placeholder="Direccion">
+                                                    <label for="floatingInput">Direccion</label>
+                                                </div>
+                    
+                                                
+                                          </div>
+                                          <div class="col-6">
+                                            <div class="form-floating mb-3">
+                                                    <input type="email" class="form-control" id="floatingInput" placeholder="nombre@ejemplo.com">
+                                                    <label for="floatingInput">Correo Electronico</label>
+                                                </div>
+                                          </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <div class="form-floating mb-3 localidadP">
+                                                    <input type="text" class="form-control"  placeholder="Localidad">
+                                                    <label for="floatingInput">Localidad</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-floating mb-3 codigoP">
+                                                    <input type="text" class="form-control"  placeholder="Codigo Postal">
+                                                    <label for="floatingInput">Codigo Postal</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <div class="form-floating mb-3 empresaP">
+                                                    <input type="text" class="form-control"  placeholder="Empresa">
+                                                    <label for="floatingInput">Empresa</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <div class="form-floating mb-3 provinciaP">
+                                                    <input type="text" class="form-control"  placeholder="Provincia">
+                                                    <label for="floatingInput">Provincia</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="form-floating mb-3 paisP">
+                                                    <input type="text" class="form-control"  placeholder="Pais">
+                                                    <label for="floatingInput">Pais</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <div class="form-floating mb-3 telefono1">
+                                                    <input type="text" class="form-control"  placeholder="Telefono">
+                                                    <label for="floatingInput">Telefono</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <div class="form-floating mb-3 telefono2">
+                                                    <input type="text" class="form-control"  placeholder="Telefono">
+                                                    <label for="floatingInput">Telefono</label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-floating mb-3 nombreC">
+                                                    <input type="text" class="form-control"  placeholder="Nombre Comercial">
+                                                    <label for="floatingInput">Nombre Comercial</label>
+                                                </div>
+                                            </div>
+                                            
+
+                                            <div class="col-3">
+                                                <div class="form-floating mb-3 tagsP">
+                                                    <input type="text" class="form-control"  placeholder="Tag">
+                                                    <label for="floatingInput">Tag</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <div class="form-floating mb-3 tipoC">
+                                                    <input type="text" class="form-control"  placeholder="Tipo de Contacto">
+                                                    <label for="floatingInput">Tipo de Contacto</label>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+
+
+
+
+                                      </div>
+                                      <div class="tab-pane fade " id="reserva" >
+                                       
+                                          
+                                              <div class="col-8 campo1">
+                          
+                                                <div class="input-group flex-nowrap">
+                                                  <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-plane"></i></span>
+                                                  <input type="text" class="form-control" placeholder="Codigo de reserva 8 digitos" aria-label="codigo" aria-describedby="addon-wrapping">
+                                                </div>
+                                              </div>
+                          
+                                              <div class="col-8 campo2">
+                          
+                                                <div class="input-group flex-nowrap">
+                                                  <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-user"></i></span>
+                                                  <input type="text" class="form-control" placeholder="Apellido /s" aria-label="apellido" aria-describedby="addon-wrapping">
+                                
+                                                </div>
+                                              </div>
+                                           
+                                          
+                                       
+                                      </div>
+                                      
+                                    </div>
+                                    
+
+                            </div>
+                        </div><!-- fin row2 -->
+                   
+
+                      
+                      
+                      
+
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+</main>
+
+
+
+
+        <!-- Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+</body>
+</html>
